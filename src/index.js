@@ -554,6 +554,7 @@ function generateMetricsPayload() {
     request_logs: requestLogs,
   };
   eventLoopHistogram.reset();
+  latencyWindow.length = 0;
   // Reset GC window stats for next interval
   gcStats.windowCount = 0;
   gcStats.windowTotalMs = 0;
